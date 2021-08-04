@@ -1,0 +1,17 @@
+﻿@using TXTextControl.Web
+@using TXTextControl.Web.MVC
+
+<div class="row">
+    <div class="col-12">
+
+        @Html.TXTextControl().TextControl(settings =>
+        {
+            settings.UserNames = new string[] { "Tim Typer" };
+            settings.DocumentFileDirectory = Server.MapPath("~/App_Data");
+        }).Render()
+
+    </div>
+</div>
+
+<script src="~/CommentsExtension/tx-comments.js"></script>
+<link href="~/CommentsExtension/tx-comments.css" rel="stylesheet" />

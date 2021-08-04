@@ -1,0 +1,53 @@
+﻿.overlay {
+    position: absolute;
+    font-family: Arial;
+    font-size: 8pt;
+    background-color: rgba(255, 0, 0, .5);
+    padding: 3px;
+    border-radius: 3px;
+    border: 1px solid red;
+    opacity: .3;
+    z-index: 6;
+    color: black;
+    user-select: none;
+    cursor: pointer;
+    transition: margin-top .1s ease-in-out;
+}
+
+    .overlay.active {
+        opacity: 1;
+        background-color: red !important;
+        color: white;
+        transition: margin-top .1s ease-in-out;
+    }
+
+        .overlay.active:hover {
+            opacity: 1;
+            background-color: red !important;
+        }
+
+    .overlay:hover {
+        opacity: 1;
+        background-color: white !important;
+    }
+
+.commentOverlay {
+    position: relative;
+    font-family: Arial;
+    font-size: 8pt;
+    padding: 5px;
+    border-radius: 0 0 3px 3px;
+    border: 1px solid red;
+    background-color: white;
+    border-top: none;
+    z-index: 6;
+    color: black;
+    margin-top: 4px;
+}
+
+    .commentOverlay textarea {
+        margin-top: 10px;
+        border: none;
+        border-top: 1px solid #c2c2c2;
+        resize: none;
+    }
