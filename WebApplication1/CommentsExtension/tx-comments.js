@@ -20,6 +20,7 @@
     var _removingAction = false;
     var _selectingAction = false;
     var _mainTextActivated = true;
+    var _addingAction = false;
 
     //-------------------------------------------------------------------------------------------------
 
@@ -173,6 +174,10 @@
 
     // content changed
     function textControlChangedHandler(e) {
+
+        if (_addingAction === true)
+            return;
+
         if (_showComments) {
             _activeComment = null;
             refreshComments();
@@ -362,7 +367,9 @@
     // loops through all comments to call the
     // highlightComment method for each single instance
     function highlightAllComments() {
+        
         if (_showComments === true) {
+
             TXTextControl.documentTargets.forEach(function (startTarget) {
                 startTarget.getTargetName(function (name) {
                     if (name.startsWith("txcs_")) {
@@ -460,6 +467,8 @@
     // id: string
     async function addComment() {
 
+        _addingAction = true;
+
         var id = Math.random().toString(36).substring(2); // random id
 
         var userName = await getUserNames();
@@ -487,6 +496,8 @@
 
                 _activeComment = id;
                 refreshComments();
+
+                _addingAction = false;
             });
         });
     }

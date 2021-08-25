@@ -110,9 +110,6 @@
     <Reference Include="TXTextControl.Web, Version=29.0.902.500, Culture=neutral, PublicKeyToken=6b83fe9a75cfb638, processorArchitecture=MSIL">
       <HintPath>..\packages\TXTextControl.Web.29.0.903.500\lib\net45\TXTextControl.Web.dll</HintPath>
     </Reference>
-    <Reference Include="TXTextControl.Web.MVC, Version=28.0.800.500, Culture=neutral, PublicKeyToken=6b83fe9a75cfb638, processorArchitecture=MSIL">
-      <HintPath>..\packages\TXTextControl.Web.28.0.800.500\lib\net45\TXTextControl.Web.MVC.dll</HintPath>
-    </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>
       <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
@@ -345,7 +342,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>1584</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:1584/</IISUrl>
+          <IISUrl>http://localhost:15844/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
